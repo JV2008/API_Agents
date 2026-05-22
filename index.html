@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Agent - Copiloto Matemático</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Main Area (Dashboard/Informations) -->
+        <main class="main-content">
+            <div class="hero-section">
+                <div class="badge">Agente Inteligente</div>
+                <h1>Copiloto de Matemática</h1>
+                <p class="subtitle">Execute expressões complexas, trigonometria, equações e cálculos avançados instantaneamente através do poder do Python integrado.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card" onclick="preencherExemplo('math.sqrt(144) + 5')">
+                    <div class="card-icon">⚡</div>
+                    <h3>Cálculos Rápidos</h3>
+                    <p>Raízes, potências e operações básicas.</p>
+                    <span class="example-code">math.sqrt(144) + 5</span>
+                </div>
+                <div class="feature-card" onclick="preencherExemplo('math.sin(math.pi / 6)')">
+                    <div class="card-icon">📐</div>
+                    <h3>Trigonometria</h3>
+                    <p>Seno, cosseno, tangente e radianos.</p>
+                    <span class="example-code">math.sin(math.pi / 6)</span>
+                </div>
+                <div class="feature-card" onclick="preencherExemplo('2**10')">
+                    <div class="card-icon">🔢</div>
+                    <h3>Potenciação</h3>
+                    <p>Cálculo de potências e exponenciais grandes.</p>
+                    <span class="example-code">2**10</span>
+                </div>
+            </div>
+
+            <div class="status-indicator">
+                <span class="status-dot"></span>
+                <span>Conectado à API do Gemini</span>
+            </div>
+        </main>
+
+        <!-- Right Sidebar (Aside) for Chat -->
+        <aside class="chat-sidebar">
+            <div class="chat-header">
+                <div class="agent-avatar">Σ</div>
+                <div>
+                    <h2>MathAgent</h2>
+                    <span class="agent-status">Online</span>
+                </div>
+            </div>
+
+            <!-- Chat Messages Container -->
+            <div class="chat-messages" id="chat-messages">
+                <div class="message agent-message">
+                    Olá! Eu sou o seu assistente de matemática. Como posso te ajudar hoje?
+                </div>
+            </div>
+
+            <!-- Chat Input Area -->
+            <div class="chat-input-area">
+                <div class="input-wrapper">
+                    <input type="text" id="input" placeholder="Digite uma expressão..." onkeydown="checarEnter(event)" autocomplete="off" />
+                    <button id="btn-enviar" onclick="enviar()">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
