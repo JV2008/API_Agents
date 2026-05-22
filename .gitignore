@@ -1,0 +1,14 @@
+# Python virtual environments
+.venv/
+venv/
+env/
+agent-math/.venv/
+
+# Python cache files
+__pycache__/
+*.pyc
+agent-math/agent_math/__pycache__/
+
+# Environment files containing secrets
+.env
+agent-math/agent_math/.env
